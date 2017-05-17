@@ -1,5 +1,5 @@
 class Holamundo(): # creando clases en python
-	def__init__(self): # En todos los metodos debe estar el SELF!, aparte self-> this
+	def __init__(self):
 		self.texto="Hola Mundo"
 	def mostrar(self,nombre):
 		self.nombre=nombre
@@ -11,7 +11,7 @@ class Holamundo(): # creando clases en python
 
 # fin de la clase
 
-nombre=raw_imput("Ingrese su nombre: ")
+nombre=raw_input("Ingrese su nombre: ")
 hola=Holamundo()
 print hola.texto
 hola.mostrar(nombre)
