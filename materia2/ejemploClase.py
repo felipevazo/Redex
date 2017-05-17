@@ -1,4 +1,5 @@
 class Holamundo(): # creando clases en python
+		   # Herencia: ingresar clase padre dentro de parentesis
 	def __init__(self):
 		self.texto="Hola Mundo"
 	def mostrar(self,nombre):
