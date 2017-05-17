@@ -1,4 +1,5 @@
 import socket
+import threading
 
 class Server():
 
@@ -14,13 +15,15 @@ class Server():
 		self.s.listen(self.maxcon)  #explicado mas adelante
 		while True:
 			client=Client(self.s.accept())# Retorna 2 valores, socket cliente y direccion cliente, socket cliente -> 
-			client.run() 
+			client.start() 
             #crear nuevo socket para seguir habilitando el primero
                # Python tiene asignacion multiple CTM
                 # addr= tupla similar a la del bind
-class Client():
+class Client(threading.Thread): # En biblioteca Threading.thread, esta metodo START, crea los hilos y despues corre por si solo
+								# Facilita pega haciendo cosas solito 
 	
 	def __init__(self,(sc,addr)):
+		threading.Thread.__init__(self)
 		self.sc=sc
 		self.addr=addr
 	def run(self):
