@@ -81,6 +81,8 @@ class Cachipun():
 			tiroJug1=raw_input("Tiro j1>>>")
 			tiroJug2=raw_input("Tiro j2>>>")
 			self.jugarDos(tiroJug1, tiroJug2, x)
+			if(x<(self.ganadasj1+self.ganadasj2)):
+				x=x-1
 			self.mostrarTabla()
 		
 	def mostrarTabla(self):
