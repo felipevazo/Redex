@@ -2,8 +2,8 @@
   - Es la aplicacion distribuida que permite enviar mensajes electronicos por medio de sist informaticos
 # Formato
   - RFC 822
-          - Formado por: Cabecera -> Info Gral
-          -              Cuerpo   -> Mensaje a transmitir
+  - Formado por: Cabecera -> Info Gral
+  - Cuerpo   -> Mensaje a transmitir
 # Campos
   - Originario(From)
   - Destinatario(To)
