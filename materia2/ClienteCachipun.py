@@ -7,7 +7,7 @@ while True:
 		valid=True
 		while(valid):
 			tirada=raw_input('piedra, papel o tijeras>>')
-			if(tirada!="tijeras"&&tirada!="piedra"&&tirada!="papel"):
+			if(tirada!="tijeras" and tirada!="piedra" and tirada!="papel"):
 				print "Entrada invalida, intente nuevamente"
 			else:
 				valid=False	
