@@ -14,18 +14,22 @@ class Server():
 		self.s.bind((self.host,self.port)) # doble parentesis pq se utiliza tupla, direccion en STRING 
 		self.s.listen(self.maxcon)  #explicado mas adelante
 		while True:
-			client=Client(self.s.accept())# Retorna 2 valores, socket cliente y direccion cliente, socket cliente -> 
-			client.start() 
+			cliente1=self.s.accept()
+			cliente2=self.s.accept()# Retorna 2 valores, socket cliente y direccion cliente, socket cliente -> 
+			cliente=Client(cliente1,cliente2)
+			cliente.start()
             #crear nuevo socket para seguir habilitando el primero
                # Python tiene asignacion multiple CTM
                 # addr= tupla similar a la del bind
 class Client(threading.Thread): # En biblioteca Threading.thread, esta metodo START, crea los hilos y despues corre por si solo
 								# Facilita pega haciendo cosas solito 
 	
-	def __init__(self,(sc,addr)):
+	def __init__(self,(sc,addr),(sc2,addr2)):
 		threading.Thread.__init__(self)
-		self.sc=sc
-		self.addr=addr
+		self.sc1=sc
+		self.addr1=addr
+		self.sc2=sc2
+		self.addr2=addr2
 	def run(self):
 			
 		while True:
