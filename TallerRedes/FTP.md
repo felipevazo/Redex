@@ -1,0 +1,21 @@
+# FTP
+- Promover que compartan archivos entre maquinas remotas
+- Servicio Fiable
+- Independiza las necesidades de los usuarios a los duferentes sistemas de archivos usados en diferentes maquinas
+- Problemas
+  - No Cifra
+  - Necesitas User/pw para usarlo
+- Usa puerto 20/21(usaremos 20)
+- Se basa en arquitectura Cliente-Servidor
+- Caracteristicas
+  - Permite conexion llamado anonimo, en caso de estar mal configurado
+  - IMPORTANTE "Enjaular" Al Usuario
+  - Una vez establecida comunicacion, puede enviar ordenes, subir y bajar archivos, dependiendo de los permisos
+  - Tipos de usuarios:
+    - Usuario FTP
+    - Usuario Anonimo, accceso a parte limitada de archivos
+  - Tipos de Conexion
+    - Activo: Puerto 21, pero hace transferencias a través del 20, Cliente Siempre Inicia Conexion
+    -Pasivo: Inicia en puerto 21, para trasferencia solicita puerto sobre el 1024, Cliente siempre inicia Conexion
+  - Tipos de Archivo: TODOS LA PUTA MADRE
+  
