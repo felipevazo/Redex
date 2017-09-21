@@ -115,5 +115,44 @@
     - Distribucion de contenidos multicast a nivel de app
   - Servicios diferensiados
     - Menores cambios a internet, pero proveer clases de servicio de las categorias anteriores
+# Streaming multimedia almacenada
+  - Se trabaja a nivel de aplicacion utilizando UDP (best effort)
+  - Tareas de reproductor:
+    - Remover Jitter (taza de demora)
+    - Servicio de descompresion
+    - Acomodo a errores
+    - INterfaces graficas con interactividad.
     
+# Multimedia en internet: Caso simple
+  - Web browser con webserver, y luego a media player.
+  - Idealmente debe estar audio y video en mismo archivo
+  - Se transmite como http, para luego pasado al reproductor
+# Audio/Video no continuo, tipo tcp
+
+# Via Streaming
+  - PPT
+  - Tanto navegador como servidor conectan con servidor
+  - Navegador conecta con metafile al reproductor
   
+# Buffering 
+- LAnzar a una taza desde el servidor de streaming el archivo
+- Hay un retardo, que significa que en el cliente se almacena el archivo mientras almacena un par de segundos, se lanza el reproductor.
+- Si o si la taza de entradda debe ser igual a la taza de salida. para evitar problemas en streaming
+
+# TCP  O UDP EN STREAMING?
+  - UDP
+    - Servidor envia a tasa apropiada para ciliente( evitando congestion)
+      - tasa envio=taasa de codigficacion= tasa cte
+      - tasa llegada=tasa cte - tasa llegada
+      
+    -  REtardo en reproduccion pequeño para compensar variaciones de retardo
+    - Recuperacion de errores, lo que alcance 
+    
+  - TCP
+    - ENviar a tasa maxima posible bajo tcp
+    - Llegada de paquetes fluctua debido a control de gonestion TCP
+    - Retardo de reproduccion mayor: taza envio de tcp estable
+    - PASA MAS FACIL POR LOS FIREWALLS
+# Tasas de cliente
+  - Con condificacion de 1.5 Mbps vs 28.8 kbps
+  - El servidor transmite multiples copias de videos, codificadas a distinta tasa, para menejar capacidades diferentes de recepcion
