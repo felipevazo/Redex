@@ -1,0 +1,25 @@
+# Virtual private networks
+
+- Empresas no solo en un lugar fisico
+- O gente que sale de la empresa y debe trabajar
+- Riesgo alto a la red
+- Costo alto -> Red Punto a Punto fisica
+- Costo Bajo -> Crear red virtual punto a punto, a través de una red virtual 
+  - Se utiliza un TUNEL, que cifra los datos
+  - Trabaja con rango propio de ip, diferente a los de la red.
+  - Encripta los datos
+  - Encapsula IP
+  - Pirateo Seguro
+  - Funcionamiento
+    - Crea tunel en el internet, y cifra datos
+    - Puede utilizar Protocolos de tunel o agregando usuario y contraseña
+      - Protocolos de tunel
+      - PPTP (P2p tunel protocol) en desuso
+        - Crea tramas con protocolo PPP(P2P) y encapsular mediante datagrama de IP 
+        - Le agrega cabeceras de basura encriptadas
+      - L2F (Reenvio de capa 2) en desuso
+      - L2TP (Capa 2) mas usado junto con IPSec
+        - Usa PPP igual, y luego encapsula con IP, IPX o NetBIOS
+      - IPSec ( Capa 3)
+        - Definido por IETF se usa para trensferir datos en capa de red
+        - Mejora seguridad e protocolo IP
